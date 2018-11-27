@@ -1,6 +1,8 @@
 import torch
 import numpy as np
 
+from torchvision.transforms import Compose, ToTensor
+
 import matplotlib.pyplot as plt
 
 from torch.utils.data import Dataset
@@ -15,11 +17,11 @@ class GridWorldDataset(Dataset):
     def get_data(self, path):
 
         with np.load(path) as f:
-            data = f.items()[0][1][0]
+            data = list(f.items())[0][1][0]
 
-        labels, s1, s2, images = data[:, 0], data[:, 1], data[:, 2], data[:, 3]
+        labels, s1, s2, images = data[:, 0], data[:, 1], data[:, 2], data[:, 3:]
 
-        images = images.reshape((-1, 1, *self.img_size))
+        images = images.reshape((-1, self.img_size[0], self.img_size[1], 2)).transpose((0, 3, 1, 2))
 
         labels, s1, s2, images = torch.from_numpy(labels), \
                                  torch.from_numpy(s1).int(), \
@@ -32,14 +34,3 @@ class GridWorldDataset(Dataset):
 
     def __len__(self):
         return self.images.shape[0]
-
-ds = GridWorldDataset('./data/gridworld_8x8.npz', (8,8))
-
-print(len(ds))
-for i in range(len(ds)):
-    label, s1, s2, image = ds[i]
-
-    print(image)
-
-    # plt.imshow(np.transpose(image.numpy(),[2, 1, 0]).squeeze())
-    # plt.show()
