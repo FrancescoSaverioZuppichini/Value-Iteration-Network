@@ -9,6 +9,9 @@ from torch.utils.data import DataLoader
 from core.model import VIN
 from core.datasets import GridWorldDataset
 
+torch.manual_seed(0)
+
+
 device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 
 WORLD_8X8 = './data/gridworld_8x8.npz', (8,8)
@@ -21,24 +24,24 @@ test_size = len(ds) - train_size
 train_ds, test_ds = torch.utils.data.random_split(ds, [train_size, test_size])
 
 train_dl = DataLoader(dataset=train_ds,
-                batch_size=128,
+                batch_size=256,
                 num_workers=14,
                 pin_memory=True,
                 drop_last=True,
                 shuffle=True)
 
 test_dl = DataLoader(dataset=test_ds,
-                batch_size=128,
+                batch_size=256,
                 num_workers=14,
                 pin_memory=True,
                 drop_last=True,
-                shuffle=True)
+                shuffle=False)
 
 print(device)
 print(len(train_dl), len(test_dl))
 vin = VIN(in_ch=2, n_act=8).to(device)
 
-optimizer = optim.Adam(vin.parameters(), lr=0.001)
+optimizer = optim.Adam(vin.parameters(), lr=0.005)
 
 criterion = nn.CrossEntropyLoss()
 print(vin)
@@ -74,7 +77,7 @@ def run(dl, epoches):
                                                  (tot_loss/ n_batch).item(),
                                                  (tot_acc / n_batch).item()))
 
-run(train_dl, 1)
+run(train_dl, 10)
 run(test_dl, 1)
 #     print(label, s1, s2, image)
 # print(len(ds))

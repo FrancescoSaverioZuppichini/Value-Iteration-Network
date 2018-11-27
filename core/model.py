@@ -31,13 +31,16 @@ class VIN(nn.Module):
                             out_features=n_act,
                             bias=False)
 
+        self.v = nn.Parameter(torch.zeros(256, 1, 8, 8))
+
     def forward(self, x, k):
         s1, s2, obs = x
 
         r_img = self.h(obs)
         r = self.r(r_img)
-
+        
         v = torch.zeros(r.size()).cuda()
+        # v = self.v
 
         for _ in range(k):
             rv = torch.cat([r, v], 1)
@@ -50,14 +53,13 @@ class VIN(nn.Module):
 
         slice_s1 = s1.long().expand(obs.shape[-1], 1, q.shape[1], q.size(0))
         slice_s1 = slice_s1.permute(3, 2, 1, 0)
-        q_out = q.gather(2, slice_s1).squeeze(2)
+        q_out = q.gather(2, slice_s1).squeeze()
 
         slice_s2 = s2.long().expand(1, q.shape[1], q.size(0))
         slice_s2 = slice_s2.permute(2, 1, 0)
-        q = q_out.gather(2, slice_s2).squeeze(2)
+        q_att = q_out.gather(2, slice_s2).squeeze()
 
-
-        logits = self.fc(q)
+        logits = self.fc(q_att)
 
 
         return logits
