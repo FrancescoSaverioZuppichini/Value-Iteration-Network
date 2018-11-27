@@ -8,7 +8,8 @@ from scipy.io import loadmat
 
 
 class GridWorldDataset(Dataset):
-    def __init__(self, path):
+    def __init__(self, path, img_size):
+        self.img_size = img_size
         self.labels, self.s1, self.s2, self.images, = self.get_data(path)
 
     def get_data(self, path):
@@ -18,7 +19,7 @@ class GridWorldDataset(Dataset):
 
         labels, s1, s2, images = data[:, 0], data[:, 1], data[:, 2], data[:, 3]
 
-        images = images.reshape((-1, 1, 16, 16))
+        images = images.reshape((-1, 1, *self.img_size))
 
         labels, s1, s2, images = torch.from_numpy(labels), \
                                  torch.from_numpy(s1).int(), \
@@ -32,7 +33,7 @@ class GridWorldDataset(Dataset):
     def __len__(self):
         return self.images.shape[0]
 
-ds = GridWorldDataset('./data/gridworld_8x8.npz')
+ds = GridWorldDataset('./data/gridworld_8x8.npz', (8,8))
 
 print(len(ds))
 for i in range(len(ds)):
