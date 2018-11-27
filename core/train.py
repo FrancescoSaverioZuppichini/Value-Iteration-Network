@@ -17,7 +17,7 @@ device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 WORLD_8X8 = './data/gridworld_8x8.npz', (8,8)
 WORLD_16X16 = './data/gridworld_16x16.npz', (16,16)
 
-ds = GridWorldDataset(*WORLD_8X8)
+ds = GridWorldDataset(*WORLD_16X16)
 
 train_size = int(0.8 * len(ds))
 test_size = len(ds) - train_size
@@ -59,7 +59,7 @@ def run(dl, epoches):
                                   obs.to(device)
             optimizer.zero_grad()
 
-            outputs = vin((s1, s2, obs), k=10)
+            outputs = vin((s1, s2, obs), k=20)
 
             loss = criterion(outputs.to(device), labels)
             loss.backward()
@@ -77,7 +77,7 @@ def run(dl, epoches):
                                                  (tot_loss/ n_batch).item(),
                                                  (tot_acc / n_batch).item()))
 
-run(train_dl, 10)
+run(train_dl, 30)
 run(test_dl, 1)
 #     print(label, s1, s2, image)
 # print(len(ds))

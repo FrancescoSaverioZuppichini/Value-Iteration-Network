@@ -1,6 +1,8 @@
 import torch
 
 import torch.nn as nn
+import torch.nn.functional as F
+import matplotlib.pyplot as plt
 
 class VIN(nn.Module):
     def __init__(self, in_ch, n_act, h_ch=150, r_ch=1, q_ch=10):
@@ -21,32 +23,44 @@ class VIN(nn.Module):
 
         stacked_v_r_dim = 2
 
+        self.w_from_i2q = nn.Parameter(
+            torch.zeros(q_ch, 1, 3, 3), requires_grad=True)
+
+        self.w_from_v2q = nn.Parameter(
+            torch.zeros(q_ch, 1, 3, 3), requires_grad=True)
+
         self.q = nn.Conv2d(in_channels=stacked_v_r_dim,
                            out_channels=q_ch,
                            kernel_size=3,
                            padding=3//2,
                            bias=False)
 
+        self.q.weight.data = torch.cat([self.w_from_i2q, self.w_from_v2q], 1)
+
         self.fc = nn.Linear(in_features=q_ch,
                             out_features=n_act,
                             bias=False)
-
-        self.v = nn.Parameter(torch.zeros(256, 1, 8, 8))
-
     def forward(self, x, k):
         s1, s2, obs = x
 
         r_img = self.h(obs)
+
         r = self.r(r_img)
-        
-        v = torch.zeros(r.size()).cuda()
-        # v = self.v
+        q =  F.conv2d(r,
+                self.w_from_i2q,
+                stride=1,
+                padding=1)
+
+        v, _ = torch.max(q, 1)
+
+        v = v.unsqueeze(1)
 
         for _ in range(k):
-            rv = torch.cat([r, v], 1)
+            rv = torch.cat([r,v], 1)
             q = self.q(rv)
+
             v, _ = torch.max(q, 1)
-            v = v.view((v.shape[0], 1, v.shape[1], v.shape[2]))
+            v = v.unsqueeze(1)
 
         rv = torch.cat([r, v], 1)
         q = self.q(rv)
