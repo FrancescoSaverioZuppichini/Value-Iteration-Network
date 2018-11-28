@@ -24,21 +24,19 @@ train_dl = DataLoader(dataset=train_ds,
                 batch_size=256,
                 num_workers=14,
                 pin_memory=True,
-                drop_last=True,
                 shuffle=True)
 
 test_dl = DataLoader(dataset=test_ds,
                 batch_size=256,
                 num_workers=14,
                 pin_memory=True,
-                drop_last=True,
                 shuffle=False)
 
 print(device)
 print('Train size={}, Test size={}'.format(len(train_dl), len(test_dl)))
 vin = VIN(in_ch=2, n_act=8).to(device)
 
-optimizer = optim.Adam(vin.parameters(), lr=0.005)
+optimizer = optim.RMSprop(vin.parameters(), lr=0.002, eps=1e-6)
 
 criterion = nn.CrossEntropyLoss()
 
