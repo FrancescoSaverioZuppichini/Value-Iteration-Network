@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/core/train.py" line="61" mnemonic="9" />
+    <bookmark url="file://$PROJECT_DIR$/core/train.py" line="70" mnemonic="9" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aef00986-42d5-455f-8150-4b4fc022e43d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/train.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/utils.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,13 +15,13 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Value_Iteration_Network$model.coverage" NAME="model Coverage Results" MODIFIED="1543349048409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
-    <SUITE FILE_PATH="coverage/Value_Iteration_Network$train.coverage" NAME="train Coverage Results" MODIFIED="1543406137909" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
+    <SUITE FILE_PATH="coverage/Value_Iteration_Network$train.coverage" NAME="train Coverage Results" MODIFIED="1543416664441" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
     <SUITE FILE_PATH="coverage/Value_Iteration_Network$datasets.coverage" NAME="datasets Coverage Results" MODIFIED="1543335541519" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5900901">
+    <splitter split-orientation="horizontal" split-proportion="0.64623535">
       <split-first>
-        <splitter split-orientation="horizontal" split-proportion="0.6048896">
+        <splitter split-orientation="horizontal" split-proportion="0.5207967">
           <split-first>
             <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
               <file pinned="false" current-in-tab="false">
@@ -39,8 +36,8 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/core/train.py">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="535">
-                      <caret line="89" column="28" lean-forward="true" selection-start-line="89" selection-start-column="28" selection-end-line="89" selection-end-column="28" />
+                    <state relative-caret-position="851">
+                      <caret line="111" lean-forward="true" selection-start-line="111" selection-end-line="111" />
                       <folding>
                         <element signature="e#0#12#0" expanded="true" />
                       </folding>
@@ -142,7 +139,7 @@
   <component name="ProjectFrameBounds" extendedState="4">
     <option name="x" value="67" />
     <option name="y" value="27" />
-    <option name="width" value="3009" />
+    <option name="width" value="3069" />
     <option name="height" value="2133" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -289,22 +286,23 @@
       <workItem from="1543323120799" duration="11000" />
       <workItem from="1543323141585" duration="14966000" />
       <workItem from="1543395686435" duration="1769000" />
-      <workItem from="1543397766285" duration="6730000" />
+      <workItem from="1543397766285" duration="8948000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23476000" />
+    <option name="totallyTimeSpent" value="25694000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="27" width="3009" height="2133" extended-state="4" />
+    <frame x="67" y="27" width="3069" height="2133" extended-state="5" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10010214" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.0980981" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3781556" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30139104" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3822772" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -318,7 +316,7 @@
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" id="SciView" order="3" visible="true" weight="0.42083758" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.42083526" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
   </component>
@@ -474,8 +472,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/core/train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="89" column="28" lean-forward="true" selection-start-line="89" selection-start-column="28" selection-end-line="89" selection-end-column="28" />
+        <state relative-caret-position="851">
+          <caret line="111" lean-forward="true" selection-start-line="111" selection-end-line="111" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>

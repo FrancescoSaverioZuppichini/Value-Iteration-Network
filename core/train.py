@@ -6,6 +6,8 @@ import torch.optim as optim
 from torch.utils.data import random_split
 from torch.utils.data import DataLoader
 
+from os import path
+
 from core.model import VIN
 from core.datasets import GridWorldDataset
 
@@ -19,8 +21,15 @@ device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 WORLD_8X8 = './data/gridworld_8x8.npz', (8,8)
 WORLD_16X16 = './data/gridworld_16x16.npz', (16,16)
 
-train_ds = GridWorldDataset(*WORLD_16X16, train=True)
-test_ds = GridWorldDataset(*WORLD_16X16, train=False)
+world = WORLD_16X16
+
+world_name, _ = path.splitext(path.basename(world[0]))
+save_path = 'model-{}.pt'.format(world_name)
+
+TRAIN = True
+
+train_ds = GridWorldDataset(*world, train=True)
+test_ds = GridWorldDataset(*world, train=False)
 
 train_dl = DataLoader(dataset=train_ds,
                 batch_size=256,
@@ -57,7 +66,7 @@ def run(dl, epoches, train=True):
                                   obs.to(device)
             if train: optimizer.zero_grad()
 
-            outputs, _ = vin((s1, s2, obs), k=20)
+            outputs, _ = vin((s1, s2, obs), k=10)
 
             loss = criterion(outputs.to(device), labels)
 
@@ -77,13 +86,16 @@ def run(dl, epoches, train=True):
                                                  (tot_loss/ n_batch).item(),
                                                  (tot_acc / n_batch).item()))
 
-print('train')
-run(train_dl, 10)
-#
-torch.save(vin, 'model.pt')
+if TRAIN:
+    print('Train')
+    run(train_dl, 30)
+    torch.save(vin, save_path)
 
-vin = torch.load('model.pt')
-print('test')
+    run(test_dl, 1, train=False)
+
+vin = torch.load(save_path)
+
+print('Test')
 run(test_dl, 1, train=False)
 
 test = test_ds[0]
