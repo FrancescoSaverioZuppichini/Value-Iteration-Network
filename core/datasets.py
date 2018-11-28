@@ -21,11 +21,12 @@ class GridWorldDataset(Dataset):
         # obs has two channels. One with 1 if obstacles and 0 otherwise, one with 1 if goal 0 otherwise
         obs = obs.reshape((-1, self.img_size[0], self.img_size[1], 2)).transpose((0, 3, 1, 2))
 
-        labels, s1, s2, images = torch.from_numpy(labels), \
+
+        labels, s1, s2, obs = torch.from_numpy(labels), \
                                  torch.from_numpy(s1).int(), \
                                  torch.from_numpy(s2).int(), \
                                  torch.from_numpy(obs),
-        return labels, s1, s2, images
+        return labels, s1, s2, obs
 
     def __getitem__(self, idx):
         return self.labels[idx], self.s1[idx], self.s2[idx], self.obs[idx]

@@ -20,13 +20,12 @@ device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 
 WORLD_8X8 = './data/gridworld_8x8.npz', (8,8)
 WORLD_16X16 = './data/gridworld_16x16.npz', (16,16)
+WORLD_28X28 = './data/gridworld_28x28.npz', (28,28)
 
 world = WORLD_16X16
 
 world_name, _ = path.splitext(path.basename(world[0]))
-save_path = 'model-{}.pt'.format(world_name)
-
-TRAIN = True
+save_path = 'model-{}-test.pt'.format(world_name)
 
 train_ds = GridWorldDataset(*world, train=True)
 test_ds = GridWorldDataset(*world, train=False)
@@ -66,7 +65,7 @@ def run(dl, epoches, train=True):
                                   obs.to(device)
             if train: optimizer.zero_grad()
 
-            outputs, _ = vin((s1, s2, obs), k=10)
+            outputs, _, _ = vin((s1, s2, obs), k=20)
 
             loss = criterion(outputs.to(device), labels)
 
@@ -85,6 +84,7 @@ def run(dl, epoches, train=True):
         print('{} loss={:.4f} acc={:.2f}'.format(epoch,
                                                  (tot_loss/ n_batch).item(),
                                                  (tot_acc / n_batch).item()))
+TRAIN = True
 
 if TRAIN:
     print('Train')
@@ -95,49 +95,13 @@ if TRAIN:
 
 vin = torch.load(save_path)
 
-print('Test')
-run(test_dl, 1, train=False)
-
-test = test_ds[0]
-(labels, s1, s2, obs) = test
-
-labels, s1, s2, obs = labels.unsqueeze(0).to(device).long(), \
-                      s1.unsqueeze(0).to(device), \
-                      s2.unsqueeze(0).to(device), \
-                      obs.unsqueeze(0).to(device)
+# print('Test')
+# run(test_dl, 1, train=False)
 
 
+labels, s1, s2, obs = get_random_data(test_ds, device, idx=0)
 
-_, v = vin((s1, s2, obs), 10)
+_, v, r_img = vin((s1, s2, obs), 10)
 
-torch_imshow(obs[0][0].squeeze(), 'world')
-torch_imshow(obs[0][1].squeeze(), 'r')
+make_images(obs, r_img, v)
 
-torch_imshow(v[0], 'v')
-
-# fig = plt.figure()
-# plt.title('r_img')
-# img = r[0].detach().squeeze().cpu().numpy()
-# plt.imshow(img)
-# fig.show()
-
-# v, _ = torch.max(q, 1)
-#
-# fig = plt.figure()
-# plt.title('r')
-# img = obs[0][0].detach().squeeze().cpu().numpy()
-# plt.imshow(img)
-# fig.show()
-#
-# fig = plt.figure()
-# plt.title('grid')
-# plt.imshow(obs[0][1].detach().squeeze().cpu().numpy())
-# fig.show()
-#
-# fig = plt.figure()
-# v = v.detach().squeeze().cpu().numpy()
-# plt.title('v')
-# plt.imshow(v)
-# fig.show()
-#     print(label, s1, s2, image)
-# print(len(ds))

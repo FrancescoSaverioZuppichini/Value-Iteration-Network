@@ -26,10 +26,10 @@ class q(nn.Module):
     def __init__(self, q_ch):
         super().__init__()
         self.w_from_i2q = nn.Parameter(
-            nn.init.xavier_normal_(torch.empty(q_ch, 1, 3, 3)))
+            nn.init.xavier_uniform_(torch.empty(q_ch, 1, 3, 3)))
 
         self.w_from_v2q = nn.Parameter(
-            nn.init.xavier_normal_(torch.empty(q_ch, 1, 3, 3)))
+            nn.init.xavier_uniform_(torch.empty(q_ch, 1, 3, 3)))
 
     def forward(self, x):
         if x.shape[1] == 1:
@@ -46,6 +46,12 @@ class q(nn.Module):
 
         return x
 
+def weights_init(m):
+    if isinstance(m, nn.Conv2d):
+        torch.nn.init.xavier_uniform_(m.weight)
+        if m.bias is not None:
+            torch.nn.init.zeros_(m.bias)
+
 class VIN(nn.Module):
     def __init__(self, in_ch, n_act, h_ch=150, r_ch=1, q_ch=10):
         super().__init__()
@@ -60,7 +66,7 @@ class VIN(nn.Module):
                            out_channels=r_ch,
                            kernel_size=3,
                            padding=3//2,
-                           bias=False
+                           bias=False,
                            )
 
         self.q = q(q_ch)
@@ -69,7 +75,7 @@ class VIN(nn.Module):
                             out_features=n_act,
                             bias=False)
 
-
+        self.apply(weights_init)
 
     def forward(self, x, k):
         s1, s2, obs = x
@@ -89,5 +95,5 @@ class VIN(nn.Module):
         logits = self.fc(q_att)
 
 
-        return logits, v
+        return logits, v, r
 

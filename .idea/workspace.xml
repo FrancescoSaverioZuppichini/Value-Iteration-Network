@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/core/train.py" line="70" mnemonic="9" />
+    <bookmark url="file://$PROJECT_DIR$/core/train.py" line="69" mnemonic="9" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aef00986-42d5-455f-8150-4b4fc022e43d" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/datasets.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/datasets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/utils.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,13 +19,27 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Value_Iteration_Network$model.coverage" NAME="model Coverage Results" MODIFIED="1543349048409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
-    <SUITE FILE_PATH="coverage/Value_Iteration_Network$train.coverage" NAME="train Coverage Results" MODIFIED="1543416664441" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
+    <SUITE FILE_PATH="coverage/Value_Iteration_Network$train.coverage" NAME="train Coverage Results" MODIFIED="1543434234783" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
     <SUITE FILE_PATH="coverage/Value_Iteration_Network$datasets.coverage" NAME="datasets Coverage Results" MODIFIED="1543335541519" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.64623535">
+    <splitter split-orientation="horizontal" split-proportion="0.7343519">
       <split-first>
-        <splitter split-orientation="horizontal" split-proportion="0.5207967">
+        <splitter split-orientation="horizontal" split-proportion="0.47800586">
           <split-first>
             <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
               <file pinned="false" current-in-tab="false">
@@ -36,8 +54,8 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/core/train.py">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="851">
-                      <caret line="111" lean-forward="true" selection-start-line="111" selection-end-line="111" />
+                    <state relative-caret-position="1174">
+                      <caret line="107" lean-forward="true" selection-start-line="107" selection-end-line="107" />
                       <folding>
                         <element signature="e#0#12#0" expanded="true" />
                       </folding>
@@ -61,11 +79,11 @@
           </split-first>
           <split-second>
             <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-              <file pinned="false" current-in-tab="false">
+              <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/core/model.py">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="238">
-                      <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+                    <state relative-caret-position="851">
+                      <caret line="68" column="37" selection-start-line="68" selection-start-column="37" selection-end-line="68" selection-end-column="37" />
                       <folding>
                         <element signature="e#0#12#0" expanded="true" />
                       </folding>
@@ -73,11 +91,32 @@
                   </provider>
                 </entry>
               </file>
-              <file pinned="false" current-in-tab="true">
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/torch/nn/modules/conv.py">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="68">
+                      <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/torch/nn/functional.py">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="438">
+                      <caret line="87" column="31" selection-start-line="87" selection-start-column="31" selection-end-line="87" selection-end-column="31" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/core/utils.py">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="85">
-                      <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+                    <state relative-caret-position="595">
+                      <caret line="35" column="14" lean-forward="true" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
+                      <folding>
+                        <element signature="e#0#26#0" expanded="true" />
+                      </folding>
                     </state>
                   </provider>
                 </entry>
@@ -92,7 +131,7 @@
             <entry file="file://$PROJECT_DIR$/core/datasets.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="442">
-                  <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
+                  <caret line="26" selection-start-line="26" selection-end-line="28" />
                   <folding>
                     <element signature="e#0#12#0" expanded="true" />
                   </folding>
@@ -129,9 +168,9 @@
         <option value="$PROJECT_DIR$/core/vin.py" />
         <option value="$PROJECT_DIR$/core/data/datasets.py" />
         <option value="$PROJECT_DIR$/core/__ini__.py" />
+        <option value="$PROJECT_DIR$/core/utils.py" />
         <option value="$PROJECT_DIR$/core/datasets.py" />
         <option value="$PROJECT_DIR$/core/model.py" />
-        <option value="$PROJECT_DIR$/core/utils.py" />
         <option value="$PROJECT_DIR$/core/train.py" />
       </list>
     </option>
@@ -139,7 +178,7 @@
   <component name="ProjectFrameBounds" extendedState="4">
     <option name="x" value="67" />
     <option name="y" value="27" />
-    <option name="width" value="3069" />
+    <option name="width" value="2730" />
     <option name="height" value="2133" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -162,6 +201,12 @@
               <item name="Value-Iteration-Network" type="b2602c69:ProjectViewProjectNode" />
               <item name="Value-Iteration-Network" type="462c0819:PsiDirectoryNode" />
               <item name="core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Value-Iteration-Network" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Value-Iteration-Network" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -286,18 +331,19 @@
       <workItem from="1543323120799" duration="11000" />
       <workItem from="1543323141585" duration="14966000" />
       <workItem from="1543395686435" duration="1769000" />
-      <workItem from="1543397766285" duration="8948000" />
+      <workItem from="1543397766285" duration="12065000" />
+      <workItem from="1543430198984" duration="4071000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25694000" />
+    <option name="totallyTimeSpent" value="32882000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="27" width="3069" height="2133" extended-state="5" />
+    <frame x="67" y="27" width="2730" height="2133" extended-state="4" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.0980981" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.089164786" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -316,8 +362,8 @@
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" weight="0.42083526" />
-      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.14747931" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32999668" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -352,13 +398,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2018.3/system/python_stubs/-2066100795/torch/_C/_TensorBase.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="542">
-          <caret line="1882" column="24" lean-forward="true" selection-start-line="1882" selection-start-column="24" selection-end-line="1882" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/lib/python3.6/dist-packages/torch/nn/modules/module.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -373,20 +412,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/torch/nn/functional.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="87" selection-start-line="87" selection-end-line="87" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/torch/optim/rmsprop.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="388">
@@ -398,13 +423,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="181" column="4" selection-start-line="181" selection-start-column="4" selection-end-line="181" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/torch/nn/modules/conv.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="300" selection-start-line="300" selection-end-line="300" />
         </state>
       </provider>
     </entry>
@@ -436,6 +454,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/core/model-gridworld_28x28.pt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/matplotlib/image.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="653" selection-start-line="653" selection-end-line="653" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="14" lean-forward="true" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/torch/nn/functional.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="87" column="31" selection-start-line="87" selection-start-column="31" selection-end-line="87" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2018.3/system/python_stubs/-2066100795/torch/_C/_TensorBase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="2940" column="8" selection-start-line="2940" selection-start-column="8" selection-end-line="2940" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/core/datasets.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -446,34 +509,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/torch/nn/modules/conv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/core/model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+        <state relative-caret-position="851">
+          <caret line="68" column="37" selection-start-line="68" selection-start-column="37" selection-end-line="68" selection-end-column="37" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/matplotlib/image.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="653" selection-start-line="653" selection-end-line="653" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="851">
-          <caret line="111" lean-forward="true" selection-start-line="111" selection-end-line="111" />
+        <state relative-caret-position="1174">
+          <caret line="107" lean-forward="true" selection-start-line="107" selection-end-line="107" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
