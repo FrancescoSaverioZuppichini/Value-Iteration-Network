@@ -12,9 +12,12 @@ def attention(x):
     slice_s1 = s1.long().expand(obs.shape[-1], 1, q.shape[1], q.shape[0])
     slice_s1 = slice_s1.permute(3, 2, 1, 0)
     q_out = q.gather(2, slice_s1).squeeze()
+    #  problem with squeeze when batch size = 1
+    if len(q_out.shape) == 2: q_out = q_out.unsqueeze(0)
 
-    slice_s2 = s2.long().expand(1, q.shape[1], q.size(0))
+    slice_s2 = s2.long().expand(1, q.shape[1], q.shape[0])
     slice_s2 = slice_s2.permute(2, 1, 0)
+
     x = q_out.gather(2, slice_s2).squeeze()
 
     return x
@@ -80,7 +83,6 @@ class VIN(nn.Module):
             v, _ = torch.max(q, 1)
             v = v.unsqueeze(1)
             q = self.q(torch.cat([r,v], 1))
-
 
         q_att = attention((s1, s2, obs, q))
 

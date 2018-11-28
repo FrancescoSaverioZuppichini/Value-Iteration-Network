@@ -9,6 +9,8 @@ from torch.utils.data import DataLoader
 from core.model import VIN
 from core.datasets import GridWorldDataset
 
+from core.utils import *
+
 torch.manual_seed(0)
 
 
@@ -42,7 +44,7 @@ criterion = nn.CrossEntropyLoss()
 
 print(vin)
 
-def run(dl, epoches):
+def run(dl, epoches, train=True):
 
     for epoch in range(epoches):
         tot_loss = torch.zeros(1).to(device)
@@ -53,14 +55,15 @@ def run(dl, epoches):
                                        s1.to(device), \
                                        s2.to(device), \
                                   obs.to(device)
-            optimizer.zero_grad()
+            if train: optimizer.zero_grad()
 
             outputs, _ = vin((s1, s2, obs), k=20)
 
             loss = criterion(outputs.to(device), labels)
 
-            loss.backward()
-            optimizer.step()
+            if train:
+                loss.backward()
+                optimizer.step()
 
             with torch.no_grad():
                 _, preds = torch.max(outputs, 1)
@@ -74,7 +77,55 @@ def run(dl, epoches):
                                                  (tot_loss/ n_batch).item(),
                                                  (tot_acc / n_batch).item()))
 
-run(train_dl, 30)
-run(test_dl, 1)
+print('train')
+run(train_dl, 10)
+#
+torch.save(vin, 'model.pt')
+
+vin = torch.load('model.pt')
+print('test')
+run(test_dl, 1, train=False)
+
+test = test_ds[0]
+(labels, s1, s2, obs) = test
+
+labels, s1, s2, obs = labels.unsqueeze(0).to(device).long(), \
+                      s1.unsqueeze(0).to(device), \
+                      s2.unsqueeze(0).to(device), \
+                      obs.unsqueeze(0).to(device)
+
+
+
+_, v = vin((s1, s2, obs), 10)
+
+torch_imshow(obs[0][0].squeeze(), 'world')
+torch_imshow(obs[0][1].squeeze(), 'r')
+
+torch_imshow(v[0], 'v')
+
+# fig = plt.figure()
+# plt.title('r_img')
+# img = r[0].detach().squeeze().cpu().numpy()
+# plt.imshow(img)
+# fig.show()
+
+# v, _ = torch.max(q, 1)
+#
+# fig = plt.figure()
+# plt.title('r')
+# img = obs[0][0].detach().squeeze().cpu().numpy()
+# plt.imshow(img)
+# fig.show()
+#
+# fig = plt.figure()
+# plt.title('grid')
+# plt.imshow(obs[0][1].detach().squeeze().cpu().numpy())
+# fig.show()
+#
+# fig = plt.figure()
+# v = v.detach().squeeze().cpu().numpy()
+# plt.title('v')
+# plt.imshow(v)
+# fig.show()
 #     print(label, s1, s2, image)
 # print(len(ds))
