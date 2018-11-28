@@ -1,23 +1,21 @@
 import torch
 import numpy as np
 
-from torchvision.transforms import Compose, ToTensor
-
 import matplotlib.pyplot as plt
 
 from torch.utils.data import Dataset
-from scipy.io import loadmat
 
 
 class GridWorldDataset(Dataset):
-    def __init__(self, path, img_size):
+    def __init__(self, path, img_size, train):
         self.img_size = img_size
+        self.train = train
         self.labels, self.s1, self.s2, self.obs, = self.get_data(path)
 
     def get_data(self, path):
-
+        idx = 0 if self.train else 1
         with np.load(path) as f:
-            data = list(f.items())[0][1][0]
+            data = list(f.items())[0][1][idx]
 
         labels, s1, s2, obs = data[:, 0], data[:, 1], data[:, 2], data[:, 3:]
         # obs has two channels. One with 1 if obstacles and 0 otherwise, one with 1 if goal 0 otherwise

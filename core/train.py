@@ -17,11 +17,8 @@ device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 WORLD_8X8 = './data/gridworld_8x8.npz', (8,8)
 WORLD_16X16 = './data/gridworld_16x16.npz', (16,16)
 
-ds = GridWorldDataset(*WORLD_16X16)
-
-train_size = int(0.8 * len(ds))
-test_size = len(ds) - train_size
-train_ds, test_ds = torch.utils.data.random_split(ds, [train_size, test_size])
+train_ds = GridWorldDataset(*WORLD_16X16, train=True)
+test_ds = GridWorldDataset(*WORLD_16X16, train=False)
 
 train_dl = DataLoader(dataset=train_ds,
                 batch_size=256,
@@ -38,12 +35,13 @@ test_dl = DataLoader(dataset=test_ds,
                 shuffle=False)
 
 print(device)
-print(len(train_dl), len(test_dl))
+print('Train size={}, Test size={}'.format(len(train_dl), len(test_dl)))
 vin = VIN(in_ch=2, n_act=8).to(device)
 
 optimizer = optim.Adam(vin.parameters(), lr=0.005)
 
 criterion = nn.CrossEntropyLoss()
+
 print(vin)
 
 def run(dl, epoches):
@@ -59,9 +57,10 @@ def run(dl, epoches):
                                   obs.to(device)
             optimizer.zero_grad()
 
-            outputs = vin((s1, s2, obs), k=20)
+            outputs, _ = vin((s1, s2, obs), k=20)
 
             loss = criterion(outputs.to(device), labels)
+
             loss.backward()
             optimizer.step()
 
