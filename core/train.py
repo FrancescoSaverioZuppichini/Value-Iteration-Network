@@ -13,33 +13,28 @@ from torch.utils.data import DataLoader
 
 from os import path
 
-from core.model import VIN
-from core.datasets import GridWorldDataset
+from model import VIN
+from datasets import GridWorldDataset
+from config import *
 
-from core.utils import *
+from utils import *
 import pandas as pd
 
 torch.manual_seed(0)
 
-device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
-
-WORLD_8X8 = './data/gridworld_8x8.npz', (8, 8)
-WORLD_16X16 = './data/gridworld_16x16.npz', (16, 16)
-WORLD_28X28 = './data/gridworld_28x28.npz', (28, 28)
-
-k_zoo = {
-    WORLD_8X8: 10,
-    WORLD_16X16: 20,
-    WORLD_28X28: 30
-}
 
 TRAIN = True
 EPOCHES = 30
 
-world = WORLD_16X16
 
-world_name, _ = path.splitext(path.basename(world[0]))
-save_path = 'model-{}.pt'.format(world_name)
+
+world = WORLD_28X28
+
+world_name = get_file_name(world)
+save_path = get_model_path(world)
+
+
+print(save_path)
 
 train_ds = GridWorldDataset(*world, train=True)
 test_ds = GridWorldDataset(*world, train=False)
@@ -133,7 +128,7 @@ vin = torch.load(save_path)
 
 labels, s1, s2, obs = get_random_data(test_ds, device, idx=1)
 
-_, v, r_img = vin((s1, s2, obs), 10)
+_, v, r_img = vin((s1, s2, obs), k)
 
 os.makedirs('./' + world_name, exist_ok=True)
 

@@ -36,3 +36,20 @@ def make_images(obs, r_img, v):
     fig.show()
 
     return fig
+
+def make_world_r_v_image(obs, v):
+    fig = plt.figure()
+
+    plt.subplot(1, 3, 1)
+    torch_imshow(obs[0][0].squeeze(), 'world')
+
+    plt.subplot(1, 3, 2)
+    torch_imshow(obs[0][1].squeeze(), 'r')
+
+    plt.subplot(1, 3, 3)
+    torch_imshow(v[0], 'V')
+
+
+    fig.show()
+
+    return fig
