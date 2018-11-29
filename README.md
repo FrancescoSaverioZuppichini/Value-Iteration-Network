@@ -1,4 +1,4 @@
-# Value-Iteration-Network
+# Value-Iteration-Network in Pytorch
 ![alt text](https://raw.githubusercontent.com/FrancescoSaverioZuppichini/Value-Iteration-Network/master/resources/vin.png)
 
 Implementation of the [Value Iteration Network](https://arxiv.org/abs/1602.02867)
@@ -16,3 +16,14 @@ This repo is heavily inspired by the original code (not really well written/docu
 | 8x8     | ![alt text](https://raw.githubusercontent.com/FrancescoSaverioZuppichini/Value-Iteration-Network/master/core/gridworld_8x8/figures.png) | 
 | 16x16    | ![alt text](https://raw.githubusercontent.com/FrancescoSaverioZuppichini/Value-Iteration-Network/master/core/gridworld_16x16/figures.png)      |  
 | 28x28 | ![alt text](https://raw.githubusercontent.com/FrancescoSaverioZuppichini/Value-Iteration-Network/master/core/gridworld_28x28/figures.png)    |    
+
+## Dataset 
+The dataset is taken from [here](https://github.com/zuoxingdong/VIN_PyTorch_Visdom/tree/master/data)
+
+For each world it contains
+- the `labels`. A list of correct actions for each state
+- the current state `s1`
+- the target state `s2`
+- the observations. A 2 channel image with 
+    - in the fist channel. 1 if obstacle 0 if not
+    - in the second channel. 10 if goal, 0 if not
