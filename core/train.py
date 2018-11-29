@@ -36,7 +36,7 @@ k_zoo = {
 TRAIN = True
 EPOCHES = 30
 
-world = WORLD_8X8
+world = WORLD_16X16
 
 world_name, _ = path.splitext(path.basename(world[0]))
 save_path = 'model-{}.pt'.format(world_name)
@@ -68,6 +68,8 @@ criterion = nn.CrossEntropyLoss()
 print(vin)
 
 def run(dl, epoches, k, train=True):
+    losses = []
+    accuracies = []
     for epoch in range(epoches):
         tot_loss = torch.zeros(1).to(device)
         tot_acc = torch.zeros(1).to(device)
@@ -101,8 +103,10 @@ def run(dl, epoches, k, train=True):
         print('{} loss={:.4f} acc={:.4f}'.format(epoch,
                                                  tot_loss,
                                                  tot_acc))
+        losses.append(tot_loss)
+        accuracies.append(tot_acc)
 
-    return np.array([tot_loss]), np.array([tot_acc])
+    return losses, accuracies
 
 
 k = k_zoo[world]
@@ -116,11 +120,13 @@ if TRAIN:
     test_loss, test_acc = run(test_dl, 1, train=False, k=k)
 
     df = pd.DataFrame(data={ 'train_loss': train_loss,
-                             'train_acc': train_acc,
-                             'test_loss' : test_loss,
-                             'test_acc': test_acc })
+                             'train_acc': train_acc})
 
-    df.to_csv('./{}/results.cvs'.format(world_name))
+    df.to_csv('./{}/train.csv'.format(world_name))
+
+    df = pd.DataFrame(data={'test_loss': test_loss,
+                            'test_acc': test_acc})
+    df.to_csv('./{}/test.csv'.format(world_name))
 
 labels, s1, s2, obs = get_random_data(test_ds, device, idx=0)
 

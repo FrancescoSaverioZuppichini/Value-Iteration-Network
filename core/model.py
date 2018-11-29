@@ -81,6 +81,7 @@ class VIN(nn.Module):
     def forward(self, x, k, store=False):
         s1, s2, obs = x
         self.values = []
+
         r_img = self.h(obs)
 
         r = self.r(r_img)
