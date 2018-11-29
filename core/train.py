@@ -23,7 +23,7 @@ import pandas as pd
 torch.manual_seed(0)
 
 
-TRAIN = True
+TRAIN = False
 EPOCHES = 30
 
 

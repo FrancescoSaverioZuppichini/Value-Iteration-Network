@@ -28,7 +28,7 @@ def make_images(obs, r_img, v):
     torch_imshow(obs[0][1].squeeze(), 'r')
 
     plt.subplot(2, 2, 3)
-    torch_imshow(-r_img[0].squeeze(), 'r from vin')
+    torch_imshow(r_img[0].squeeze(), 'r from vin')
 
     plt.subplot(2, 2, 4)
     torch_imshow(v[0], 'V')
