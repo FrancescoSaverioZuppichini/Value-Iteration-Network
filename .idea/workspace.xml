@@ -2,78 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aef00986-42d5-455f-8150-4b4fc022e43d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/core/gridworld_16x16/0.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_16x16/0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_16x16/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_16x16/1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_16x16/10.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_16x16/10.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_16x16/11.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_16x16/11.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_16x16/12.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_16x16/12.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_16x16/13.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_16x16/13.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_16x16/14.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_16x16/14.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_16x16/15.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_16x16/15.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_16x16/16.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_16x16/16.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_16x16/17.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_16x16/17.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_16x16/18.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_16x16/18.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_16x16/19.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_16x16/19.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_16x16/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_16x16/2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_16x16/20.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_16x16/20.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_16x16/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_16x16/3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_16x16/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_16x16/4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_16x16/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_16x16/5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_16x16/6.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_16x16/6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_16x16/7.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_16x16/7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_16x16/8.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_16x16/8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_16x16/9.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_16x16/9.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_16x16/figures.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_16x16/figures.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_28x28/0.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_28x28/0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_28x28/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_28x28/1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_28x28/10.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_28x28/10.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_28x28/11.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_28x28/11.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_28x28/12.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_28x28/12.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_28x28/13.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_28x28/13.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_28x28/14.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_28x28/14.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_28x28/15.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_28x28/15.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_28x28/16.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_28x28/16.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_28x28/17.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_28x28/17.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_28x28/18.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_28x28/18.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_28x28/19.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_28x28/19.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_28x28/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_28x28/2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_28x28/20.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_28x28/20.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_28x28/21.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_28x28/21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_28x28/22.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_28x28/22.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_28x28/23.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_28x28/23.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_28x28/24.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_28x28/24.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_28x28/25.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_28x28/25.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_28x28/26.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_28x28/26.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_28x28/27.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_28x28/27.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_28x28/28.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_28x28/28.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_28x28/29.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_28x28/29.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_28x28/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_28x28/3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_28x28/30.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_28x28/30.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_28x28/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_28x28/4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_28x28/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_28x28/5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_28x28/6.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_28x28/6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_28x28/7.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_28x28/7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_28x28/8.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_28x28/8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_28x28/9.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_28x28/9.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_28x28/figures.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_28x28/figures.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_8x8/0.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_8x8/0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_8x8/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_8x8/1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_8x8/10.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_8x8/10.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_8x8/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_8x8/2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_8x8/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_8x8/3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_8x8/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_8x8/4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_8x8/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_8x8/5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_8x8/6.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_8x8/6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_8x8/7.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_8x8/7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_8x8/8.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_8x8/8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_8x8/9.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_8x8/9.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_8x8/figures.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_8x8/figures.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_8x8/results.cvs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/model-gridworld_16x16.pt" beforeDir="false" afterPath="$PROJECT_DIR$/core/model-gridworld_16x16.pt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/model-gridworld_28x28.pt" beforeDir="false" afterPath="$PROJECT_DIR$/core/model-gridworld_28x28.pt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/model-gridworld_8x8.pt" beforeDir="false" afterPath="$PROJECT_DIR$/core/model-gridworld_8x8.pt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/presentation.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/core/presentation.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -373,12 +302,12 @@
       <workItem from="1543397766285" duration="12065000" />
       <workItem from="1543430198984" duration="11758000" />
       <workItem from="1543487636780" duration="19000" />
-      <workItem from="1543489104526" duration="5802000" />
+      <workItem from="1543489104526" duration="6427000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46390000" />
+    <option name="totallyTimeSpent" value="47015000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="27" width="2867" height="2133" extended-state="5" />
