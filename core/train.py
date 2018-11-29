@@ -40,13 +40,13 @@ train_ds = GridWorldDataset(*world, train=True)
 test_ds = GridWorldDataset(*world, train=False)
 
 train_dl = DataLoader(dataset=train_ds,
-                      batch_size=128,
+                      batch_size=256,
                       num_workers=14,
                       pin_memory=True,
                       shuffle=True)
 
 test_dl = DataLoader(dataset=test_ds,
-                     batch_size=128,
+                     batch_size=256,
                      num_workers=14,
                      pin_memory=True,
                      shuffle=False)
