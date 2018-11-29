@@ -77,9 +77,10 @@ class VIN(nn.Module):
 
         self.apply(weights_init)
 
-    def forward(self, x, k):
-        s1, s2, obs = x
 
+    def forward(self, x, k, store=False):
+        s1, s2, obs = x
+        self.values = []
         r_img = self.h(obs)
 
         r = self.r(r_img)
@@ -87,8 +88,10 @@ class VIN(nn.Module):
 
         for _ in range(k + 1): # include last iteration
             v, _ = torch.max(q, 1)
+            self.values.append(v[0].detach().squeeze().cpu().numpy())
             v = v.unsqueeze(1)
             q = self.q(torch.cat([r,v], 1))
+
 
         q_att = attention((s1, s2, obs, q))
 

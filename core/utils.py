@@ -34,3 +34,5 @@ def make_images(obs, r_img, v):
     torch_imshow(v[0], 'V')
 
     fig.show()
+
+    return fig
