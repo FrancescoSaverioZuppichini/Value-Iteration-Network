@@ -17,6 +17,7 @@ from core.model import VIN
 from core.datasets import GridWorldDataset
 
 from core.utils import *
+import pandas as pd
 
 torch.manual_seed(0)
 
@@ -26,7 +27,16 @@ WORLD_8X8 = './data/gridworld_8x8.npz', (8, 8)
 WORLD_16X16 = './data/gridworld_16x16.npz', (16, 16)
 WORLD_28X28 = './data/gridworld_28x28.npz', (28, 28)
 
-world = WORLD_28X28
+k_zoo = {
+    WORLD_8X8: 10,
+    WORLD_16X16: 20,
+    WORLD_28X28: 30
+}
+
+TRAIN = True
+EPOCHES = 30
+
+world = WORLD_8X8
 
 world_name, _ = path.splitext(path.basename(world[0]))
 save_path = 'model-{}.pt'.format(world_name)
@@ -35,13 +45,13 @@ train_ds = GridWorldDataset(*world, train=True)
 test_ds = GridWorldDataset(*world, train=False)
 
 train_dl = DataLoader(dataset=train_ds,
-                      batch_size=512,
+                      batch_size=128,
                       num_workers=14,
                       pin_memory=True,
                       shuffle=True)
 
 test_dl = DataLoader(dataset=test_ds,
-                     batch_size=512,
+                     batch_size=128,
                      num_workers=14,
                      pin_memory=True,
                      shuffle=False)
@@ -51,7 +61,7 @@ print('Train size={}, Test size={}'.format(len(train_dl), len(test_dl)))
 
 vin = VIN(in_ch=2, n_act=8).to(device)
 
-optimizer = optim.RMSprop(vin.parameters(), lr=0.005)
+optimizer = optim.RMSprop(vin.parameters(), lr=0.001)
 
 criterion = nn.CrossEntropyLoss()
 
@@ -86,21 +96,31 @@ def run(dl, epoches, k, train=True):
                 tot_loss += loss
                 tot_acc += acc
 
-
+        tot_loss = (tot_loss / n_batch).item()
+        tot_acc = (tot_acc / n_batch).item()
         print('{} loss={:.4f} acc={:.4f}'.format(epoch,
-                                                 (tot_loss / n_batch).item(),
-                                                 (tot_acc / n_batch).item()))
+                                                 tot_loss,
+                                                 tot_acc))
+
+    return np.array([tot_loss]), np.array([tot_acc])
 
 
-TRAIN = True
-k = 30
+k = k_zoo[world]
+
 if TRAIN:
-    run(train_dl, 30, k=k)
+    train_loss, train_acc = run(train_dl, EPOCHES, k=k)
     torch.save(vin, save_path)
 
-vin = torch.load(save_path)
+    vin = torch.load(save_path)
 
-run(test_dl, 1, train=False, k=k)
+    test_loss, test_acc = run(test_dl, 1, train=False, k=k)
+
+    df = pd.DataFrame(data={ 'train_loss': train_loss,
+                             'train_acc': train_acc,
+                             'test_loss' : test_loss,
+                             'test_acc': test_acc })
+
+    df.to_csv('./{}/results.cvs'.format(world_name))
 
 labels, s1, s2, obs = get_random_data(test_ds, device, idx=0)
 
