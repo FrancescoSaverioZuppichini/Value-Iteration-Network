@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aef00986-42d5-455f-8150-4b4fc022e43d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_16x16/test.csv" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_16x16/test-xavier.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_16x16/train.csv" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_16x16/train-xavier.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/presentation.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/core/presentation.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/train.py" afterDir="false" />
-    </list>
+    <list default="true" id="aef00986-42d5-455f-8150-4b4fc022e43d" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +40,7 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/core/train.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="828">
@@ -63,7 +57,7 @@
               <provider selected="true" editor-type-id="text-editor" />
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/core/gridworld_16x16/train-xavier.csv">
               <provider selected="true" editor-type-id="text-editor" />
             </entry>
@@ -167,7 +161,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="4">
+  <component name="ProjectFrameBounds" extendedState="5">
     <option name="x" value="67" />
     <option name="y" value="27" />
     <option name="width" value="3186" />
@@ -326,17 +320,17 @@
       <workItem from="1543397766285" duration="12065000" />
       <workItem from="1543430198984" duration="11758000" />
       <workItem from="1543487636780" duration="19000" />
-      <workItem from="1543489104526" duration="10121000" />
+      <workItem from="1543489104526" duration="10433000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50709000" />
+    <option name="totallyTimeSpent" value="51021000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="27" width="3186" height="2133" extended-state="5" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1573539" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1573539" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -355,7 +349,7 @@
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" visible="true" weight="0.22222222" />
+      <window_info active="true" anchor="right" id="SciView" order="3" visible="true" weight="0.22222222" />
       <window_info anchor="right" id="Database" order="4" weight="0.32999668" />
     </layout>
     <layout-to-restore>
@@ -473,6 +467,12 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/core/gridworld_16x16/test-xavier.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/gridworld_16x16/train-xavier.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/core/train.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="828">
@@ -482,12 +482,6 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/gridworld_16x16/test-xavier.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/gridworld_16x16/train-xavier.csv">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
