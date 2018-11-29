@@ -36,7 +36,7 @@ k_zoo = {
 TRAIN = True
 EPOCHES = 30
 
-world = WORLD_16X16
+world = WORLD_8X8
 
 world_name, _ = path.splitext(path.basename(world[0]))
 save_path = 'model-{}.pt'.format(world_name)
@@ -128,9 +128,12 @@ if TRAIN:
                             'test_acc': test_acc})
     df.to_csv('./{}/test.csv'.format(world_name))
 
-labels, s1, s2, obs = get_random_data(test_ds, device, idx=0)
 
-_, v, r_img = vin((s1, s2, obs), k)
+vin = torch.load(save_path)
+
+labels, s1, s2, obs = get_random_data(test_ds, device, idx=1)
+
+_, v, r_img = vin((s1, s2, obs), 10)
 
 os.makedirs('./' + world_name, exist_ok=True)
 

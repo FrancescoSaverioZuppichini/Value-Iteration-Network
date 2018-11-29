@@ -25,11 +25,16 @@ def attention(x):
 class q(nn.Module):
     def __init__(self, q_ch):
         super().__init__()
-        self.w_from_i2q = nn.Parameter(
-            nn.init.xavier_uniform_(torch.empty(q_ch, 1, 3, 3)))
+        # self.w_from_i2q = nn.Parameter(
+        #     nn.init.xavier_uniform_(torch.empty(q_ch, 1, 3, 3)))
+        #
+        # self.w_from_v2q = nn.Parameter(
+        #     nn.init.xavier_uniform_(torch.empty(q_ch, 1, 3, 3)))
 
-        self.w_from_v2q = nn.Parameter(
-            nn.init.xavier_uniform_(torch.empty(q_ch, 1, 3, 3)))
+        self.w_from_i2q = nn.Parameter(torch.zeros(q_ch, 1, 3, 3))
+
+        self.w_from_v2q = nn.Parameter(torch.zeros(q_ch, 1, 3, 3))
+
 
     def forward(self, x):
         if x.shape[1] == 1:
@@ -75,13 +80,11 @@ class VIN(nn.Module):
                             out_features=n_act,
                             bias=False)
 
-        self.apply(weights_init)
+        # self.apply(weights_init)
 
-
-    def forward(self, x, k, store=False):
+    def forward(self, x, k):
         s1, s2, obs = x
         self.values = []
-
         r_img = self.h(obs)
 
         r = self.r(r_img)
@@ -89,7 +92,6 @@ class VIN(nn.Module):
 
         for _ in range(k + 1): # include last iteration
             v, _ = torch.max(q, 1)
-            self.values.append(v[0].detach().squeeze().cpu().numpy())
             v = v.unsqueeze(1)
             q = self.q(torch.cat([r,v], 1))
 
