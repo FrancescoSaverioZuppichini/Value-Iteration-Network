@@ -36,7 +36,7 @@ k_zoo = {
 TRAIN = True
 EPOCHES = 30
 
-world = WORLD_8X8
+world = WORLD_16X16
 
 world_name, _ = path.splitext(path.basename(world[0]))
 save_path = 'model-{}.pt'.format(world_name)

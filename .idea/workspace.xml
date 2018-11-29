@@ -3,14 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="aef00986-42d5-455f-8150-4b4fc022e43d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_8x8/figures.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_8x8/figures.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_8x8/test.csv" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_8x8/test.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gridworld_8x8/train.csv" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_8x8/train.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/model-gridworld_8x8.pt" beforeDir="false" afterPath="$PROJECT_DIR$/core/model-gridworld_8x8.pt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/gridworld_16x16/test.csv" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_16x16/test-xavier.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/gridworld_16x16/train.csv" beforeDir="false" afterPath="$PROJECT_DIR$/core/gridworld_16x16/train-xavier.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/presentation.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/core/presentation.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/train.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/utils.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,7 +16,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Value_Iteration_Network$model.coverage" NAME="model Coverage Results" MODIFIED="1543349048409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
-    <SUITE FILE_PATH="coverage/Value_Iteration_Network$train.coverage" NAME="train Coverage Results" MODIFIED="1543503458729" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
+    <SUITE FILE_PATH="coverage/Value_Iteration_Network$train.coverage" NAME="train Coverage Results" MODIFIED="1543503635301" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
     <SUITE FILE_PATH="coverage/Value_Iteration_Network$datasets.coverage" NAME="datasets Coverage Results" MODIFIED="1543335541519" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
   </component>
   <component name="DatabaseView">
@@ -53,13 +49,23 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/core/train.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-804">
-                  <caret line="36" column="12" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
+                <state relative-caret-position="828">
+                  <caret line="132" lean-forward="true" selection-start-line="132" selection-end-line="132" />
                   <folding>
                     <element signature="e#0#12#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/core/gridworld_16x16/test-xavier.csv">
+              <provider selected="true" editor-type-id="text-editor" />
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/core/gridworld_16x16/train-xavier.csv">
+              <provider selected="true" editor-type-id="text-editor" />
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
@@ -76,10 +82,10 @@
               <provider selected="true" editor-type-id="text-editor" />
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/core/model.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="216">
+                <state relative-caret-position="-124">
                   <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
                   <folding>
                     <element signature="e#0#12#0" expanded="true" />
@@ -156,12 +162,12 @@
         <option value="$PROJECT_DIR$/core/__ini__.py" />
         <option value="$PROJECT_DIR$/core/datasets.py" />
         <option value="$PROJECT_DIR$/core/utils.py" />
-        <option value="$PROJECT_DIR$/core/train.py" />
         <option value="$PROJECT_DIR$/core/model.py" />
+        <option value="$PROJECT_DIR$/core/train.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="5">
+  <component name="ProjectFrameBounds" extendedState="4">
     <option name="x" value="67" />
     <option name="y" value="27" />
     <option name="width" value="3186" />
@@ -187,6 +193,12 @@
               <item name="Value-Iteration-Network" type="b2602c69:ProjectViewProjectNode" />
               <item name="Value-Iteration-Network" type="462c0819:PsiDirectoryNode" />
               <item name="core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Value-Iteration-Network" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Value-Iteration-Network" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="gridworld_16x16" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -314,23 +326,22 @@
       <workItem from="1543397766285" duration="12065000" />
       <workItem from="1543430198984" duration="11758000" />
       <workItem from="1543487636780" duration="19000" />
-      <workItem from="1543489104526" duration="9716000" />
+      <workItem from="1543489104526" duration="10121000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50304000" />
+    <option name="totallyTimeSpent" value="50709000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="27" width="3186" height="2133" extended-state="5" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1573539" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1573539" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.34827408" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.34827408" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3822772" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -452,25 +463,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-804">
-          <caret line="36" column="12" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
+        <state relative-caret-position="-124">
           <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="828">
+          <caret line="132" lean-forward="true" selection-start-line="132" selection-end-line="132" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/gridworld_16x16/test-xavier.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/gridworld_16x16/train-xavier.csv">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
