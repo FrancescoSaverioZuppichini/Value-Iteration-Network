@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aef00986-42d5-455f-8150-4b4fc022e43d" name="Default" comment="" />
+    <list default="true" id="aef00986-42d5-455f-8150-4b4fc022e43d" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/core/presentation.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/core/presentation.ipynb" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +149,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="5">
+  <component name="ProjectFrameBounds" extendedState="4">
     <option name="x" value="67" />
     <option name="y" value="27" />
     <option name="width" value="2867" />
@@ -300,12 +302,12 @@
       <workItem from="1543397766285" duration="12065000" />
       <workItem from="1543430198984" duration="11758000" />
       <workItem from="1543487636780" duration="19000" />
-      <workItem from="1543489104526" duration="7036000" />
+      <workItem from="1543489104526" duration="7763000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47624000" />
+    <option name="totallyTimeSpent" value="48351000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="27" width="2867" height="2133" extended-state="5" />
