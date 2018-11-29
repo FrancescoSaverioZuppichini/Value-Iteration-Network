@@ -25,9 +25,10 @@ def attention(x):
 class q(nn.Module):
     def __init__(self, q_ch):
         super().__init__()
+        # weights from input to q ~ reward in Bellman equation
         self.w_from_i2q = nn.Parameter(
             nn.init.xavier_uniform_(torch.empty(q_ch, 1, 3, 3)))
-
+        # weights from value layer to q ~ transition probabilities in Bellman equation
         self.w_from_v2q = nn.Parameter(
             nn.init.xavier_uniform_(torch.empty(q_ch, 1, 3, 3)))
 
