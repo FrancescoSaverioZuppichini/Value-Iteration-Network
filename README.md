@@ -3,7 +3,7 @@
 
 Implementation of the [Value Iteration Network](https://arxiv.org/abs/1602.02867)
 ## Introduction
-This repo is heavily inspired by the original code (not really well written/documented) and a couple of others really well made implementation. 
+This repo is heavily inspired by the original code (not so easy to follow and not well documented) and a couple of others really well made implementation. 
 
 - https://github.com/kentsommer/pytorch-value-iteration-networks
 - https://github.com/avivt/VIN
