@@ -15,6 +15,8 @@ This repo is heavily inspired by the original code (not so easy to follow) and a
 | ------------- |:-------------:|
 | 28x28 | ![alt text](https://raw.githubusercontent.com/FrancescoSaverioZuppichini/Value-Iteration-Network/master/core/gridworld_28x28/figures.png)    |    
 
+![alt](https://raw.githubusercontent.com/FrancescoSaverioZuppichini/Value-Iteration-Network/master/core/gridworld_28x28/animation.gif)
+
 ## Dataset 
 The dataset is taken from [here](https://github.com/zuoxingdong/VIN_PyTorch_Visdom/tree/master/data)
 
