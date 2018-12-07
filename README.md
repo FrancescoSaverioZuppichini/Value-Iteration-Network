@@ -15,6 +15,8 @@ This repo is heavily inspired by the original code (not so easy to follow) and a
 | ------------- |:-------------:|
 | 28x28 | ![alt text](https://raw.githubusercontent.com/FrancescoSaverioZuppichini/Value-Iteration-Network/master/core/gridworld_28x28/figures.png)    |    
 
+Value function for each iteration of the Value Iteration Network from `k=0` to `k=30` in the `28x28` grid world
+
 ![alt](https://raw.githubusercontent.com/FrancescoSaverioZuppichini/Value-Iteration-Network/master/core/gridworld_28x28/animation.gif)
 
 ## Dataset 
