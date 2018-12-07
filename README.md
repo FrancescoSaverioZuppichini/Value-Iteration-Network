@@ -3,7 +3,7 @@
 
 Implementation of the [Value Iteration Network](https://arxiv.org/abs/1602.02867)
 ## Introduction
-This repo is heavily inspired by the original code (not so easy to follow and not well documented) and a couple of others really well made implementation. 
+This repo is heavily inspired by the original code (not so easy to follow) and a couple of others really well made implementation. 
 
 - https://github.com/kentsommer/pytorch-value-iteration-networks
 - https://github.com/avivt/VIN
@@ -13,9 +13,11 @@ This repo is heavily inspired by the original code (not so easy to follow and no
 
 | World        | Results          
 | ------------- |:-------------:|
-| 8x8     | ![alt text](https://raw.githubusercontent.com/FrancescoSaverioZuppichini/Value-Iteration-Network/master/core/gridworld_8x8/figures.png) | 
-| 16x16    | ![alt text](https://raw.githubusercontent.com/FrancescoSaverioZuppichini/Value-Iteration-Network/master/core/gridworld_16x16/figures.png)      |  
 | 28x28 | ![alt text](https://raw.githubusercontent.com/FrancescoSaverioZuppichini/Value-Iteration-Network/master/core/gridworld_28x28/figures.png)    |    
+
+Value function for each iteration of the Value Iteration Network from `k=0` to `k=30` in the `28x28` grid world
+
+![alt](https://raw.githubusercontent.com/FrancescoSaverioZuppichini/Value-Iteration-Network/master/core/gridworld_28x28/animation.gif)
 
 ## Dataset 
 The dataset is taken from [here](https://github.com/zuoxingdong/VIN_PyTorch_Visdom/tree/master/data)
